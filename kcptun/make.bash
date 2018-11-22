@@ -42,12 +42,6 @@ if [ ! -d "$DIR/go/bin" ]; then
     popd
 fi
 
-export GOROOT=$DIR/go
-export GOPATH=$DEPS/gopath
-export GOBIN=$GOPATH/bin
-mkdir -p $GOBIN
-export PATH=$GOROOT/bin:$PATH
-
 pushd kcptun/client
 
 echo "Get dependences for kcptun"
