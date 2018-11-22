@@ -23,7 +23,7 @@
 	branch = shadowsocks-android
 [submodule "kcptun/kcptun"]
 	path = kcptun/kcptun
-	url = https://github.com/shadowsocks/kcptun
+	url = https://github.com/ushijimamit/kcptun
 [submodule "src/main/jni/mbedtls"]
 	path = src/main/jni/mbedtls
 	url = https://github.com/ARMmbed/mbedtls
