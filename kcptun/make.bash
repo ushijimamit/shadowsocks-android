@@ -34,20 +34,7 @@ if [ ! -d "$ANDROID_X86_TOOLCHAIN" ]; then
         --api 16 --install-dir $ANDROID_X86_TOOLCHAIN
 fi
 
-if [ ! -d "$DIR/go/bin" ]; then
-    echo "Build the custom go"
-
-    pushd $DIR/go/src
-    try ./make.bash
-    popd
-fi
-
 pushd kcptun/client
-
-echo "Get dependences for kcptun"
-go get -u github.com/xtaci/kcp-go
-go get -u github.com/xtaci/smux
-go get
 
 echo "Cross compile kcptun for arm"
 try env CGO_ENABLED=1 CC=$ANDROID_ARM_CC GOOS=android GOARCH=arm GOARM=7 go build -ldflags="-s -w"
